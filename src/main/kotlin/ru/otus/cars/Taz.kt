@@ -1,6 +1,11 @@
 package ru.otus.cars
 
 object Taz: Car {
+
+    override var tankMouth: TankMouth
+        get() = throw NotImplementedError("Взрыв")
+        set(value) {}
+
     /**
      * Номерной знак
      */

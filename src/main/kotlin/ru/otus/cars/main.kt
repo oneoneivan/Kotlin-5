@@ -16,7 +16,24 @@ fun main() {
     techChecks()
     println("\n===> Taz...")
     println(Taz.color)
+    gasValue()
 }
+
+    fun gasValue() {
+        val gasStation = GasStation()
+        val vaz2107 = Vaz2107.build(Car.Plates("123", 77))
+        val vaz2108 = Vaz2108.build(Car.Plates("321", 78))
+        val taz = Taz
+        val carsList = listOf(vaz2107, vaz2108, taz)
+
+        carsList.forEach{
+            val addLiters = 50
+            println("Характеристики до заправки $it")
+            gasStation.safeAddFuel(it, addLiters)
+            println("Характеристики после заправки $it")
+        }
+    }
+
 
 fun driveCars() {
     val vaz1 = Togliatti.buildCar(Vaz2107, Car.Plates("123", 77))
